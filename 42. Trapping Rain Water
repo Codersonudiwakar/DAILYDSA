@@ -1,0 +1,15 @@
+class Solution {
+    public int lengthOfLastWord(String str) {
+        int c=0;
+         if (str.isEmpty()) {
+            return 0;
+         }
+    str = str.trim();
+                if (str.contains(" ")) {
+            String[] words = str.split("\\s+");
+            String lastWord = words[words.length - 1];
+            c=lastWord.length();
+        } 
+        return c;
+    }
+}
