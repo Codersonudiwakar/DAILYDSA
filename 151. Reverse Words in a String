@@ -1,0 +1,24 @@
+class Solution {
+    public String reverseWords(String s) {
+    //     s = s.trim();
+    // String[] words = s.split("\\s+");
+    // String reversed = new String();
+    // for(int i=words.length-1;i>=0;i--){
+    //     if(i==0){
+    //         reversed+=words[i];
+    //     }
+    //     else{
+    //         reversed+=words[i]+" ";
+    //     }
+    // }
+    // return reversed;
+    String[] wordsArray = s.trim().split("\\s+");
+      
+        List<String> wordsList = new ArrayList<String>(Arrays.asList(wordsArray));
+      
+        Collections.reverse(wordsList);
+      
+        String reversed = String.join(" ", wordsList);
+              return reversed;
+    }
+}
